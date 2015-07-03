@@ -3,7 +3,7 @@ Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin/
 node /^bootstrap\d+/ {
   include rjil::base
 }
-##
+##Saju
 # setup ceph configuration and osds on st nodes
 # These nodes wait at least one stmon to be registered in consul.
 ##
