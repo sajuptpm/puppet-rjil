@@ -146,6 +146,18 @@ node /^oclb\d+/ {
   include rjil::haproxy::openstack
 }
 
+#
+# just keystone and a db
+#
+node /^keystonedb\d+/ {
+  include rjil::base
+  include rjil::memcached
+  include openstacklib::openstackclient
+  include rjil::db
+  include rjil::keystone
+  include rjil::openstack_objects
+}
+
 ##
 # compute nodes
 # gcp is a special cp node which is also used as gateway for floating IP access
