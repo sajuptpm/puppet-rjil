@@ -8,18 +8,24 @@ rjil::system::apt::env_repositories:
     repos: 'main'
     include_src: false
 
-public_address: "%{ipaddress_10_140_15_0_24}"
-public_interface: "%{interface_10_140_15_0_24}"
-private_address: "%{ipaddress_10_140_15_0_24}"
-private_interface: "%{interface_10_140_15_0_24}"
+
+public_address: "%{ipaddress_192_168_100_0_24}"
+public_interface: "%{interface_192_168_100_0_24}"
+private_address: "%{ipaddress_192_168_100_0_24}"
+private_interface: "%{interface_192_168_100_0_24}"
+
+#public_address: "%{ipaddress_10_140_15_0_24}"
+#public_interface: "%{interface_10_140_15_0_24}"
+#private_address: "%{ipaddress_10_140_15_0_24}"
+#private_interface: "%{interface_10_140_15_0_24}"
 
 rjil::jiocloud::consul::encrypt: "%{consul_gossip_encrypt}"
-contrail::vrouter::vrouter_physical_interface: eth3
+contrail::vrouter::vrouter_physical_interface: eth1
 
 ##Ceph
 #Create 2 RAID-0 Array in each 4TB Disk. Second RAID-0 Array (sdb) can use for osd.
-rjil::ceph::osd::osds:
- - sdb
+#rjil::ceph::osd::osds:
+# - sdb
 
 #Disable autogenerate to specify osds like rjil::ceph::osd::osds: -sdb
 rjil::ceph::osd::autogenerate: true
@@ -27,20 +33,29 @@ rjil::ceph::osd::autodisk_size: 10
 rjil::ceph::osd::osd_journal_size: 2
 
 # Only Qemu is supported on virtual testing environment
-#nova::compute::libvirt::libvirt_virt_type: qemu
+nova::compute::libvirt::libvirt_virt_type: qemu
+
+# service check interval of 10s would be too often and thus causing
+# multiple instances of same chcecking scripts are running in parallel.
+# Just making large enough numer. This may need further discussion to get
+# more appropriate value.
+rjil::jiocloud::consul::service::interval: 120s
 
 rjil::system::accounts::active_users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak]
 rjil::system::accounts::sudo_users:
   admin:
     users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak]
 
-rjil::base::self_signed_cert: true
 
+rjil::jiocloud::dhcp::interfaces:
+  - eth1
+
+rjil::base::self_signed_cert: true
 tempest::admin_password: tempest_admin
 tempest::admin_username: tempest_admin
 
-ceph::conf::pool_default_pg_num: 128
-ceph::conf::pool_default_pgp_num: 128
+#ceph::conf::pool_default_pg_num: 128
+#ceph::conf::pool_default_pgp_num: 128
 
 rjil::neutron::contrail::fip_pools:
   public:
@@ -54,12 +69,18 @@ rjil::neutron::contrail::fip_pools:
     network_name: private_shared_net
     subnet_name: private_shared_subnet
     cidr: 99.0.0.0/24
-    rt_number: 10001
     public: false
-    tenants: ['tempest','mgmt_tenant','internal_tenant']
+    tenants: ['tempest']
 
 contrail::vrouter::vgw_subnets: ['100.1.0.0/24']
 #contrail::edge_routers:
 #  router1: {host_address: '1.1.1.1'}
 #  router2: {host_address: '1.1.1.2'}
+
+ntp::servers:
+  - 10.140.221.235
+  - 10.140.221.232
+  - 10.140.221.236
+
+
 
