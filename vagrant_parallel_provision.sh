@@ -2,6 +2,9 @@
 #
 # Parallel provisioning for vagrant
 #
+
+##SM
+. sourcevagrant.sh
   
 up() {
   . newtokens.sh
