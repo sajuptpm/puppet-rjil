@@ -8,7 +8,7 @@
   
 up() {
   . newtokens.sh
-  export layout=full
+  #export layout=full
   if [ ! -n $consul_discovery_token ]; then
     echo "Error fetching consul discovery token, exiting"
     exit 100
