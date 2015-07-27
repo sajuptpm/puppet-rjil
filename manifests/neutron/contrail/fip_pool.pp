@@ -24,6 +24,8 @@ define rjil::neutron::contrail::fip_pool (
   $subnet_ip_start     = undef,
   $subnet_ip_end       = undef,
   $public              = true,
+  $admin_user          = 'admin',
+  $admin_tenant        = 'openstack',
   $tenant_name         = 'services',
   $tenants             = [],
 ) {
@@ -42,6 +44,9 @@ define rjil::neutron::contrail::fip_pool (
       ensure         => present,
       network_fqname => "default-domain:${tenant_name}:${network_name}",
       tenants        => $tenants,
+      admin_user     => $admin_user,
+      admin_password => $keystone_admin_password,
+      admin_tenant   => $admin_tenant,
       require        => Neutron_network[$network_name],
     }
   }
