@@ -71,11 +71,11 @@ mod 'puppetlabs/apt',
 
 mod 'stackforge/cinder',
   :git => "#{base_url}/stackforge/puppet-cinder",
-  :ref => 'stable/icehouse'
+  :ref => 'master'
 
 mod 'stackforge/openstacklib',
-  :git => "#{base_url}/jiocloud/puppet-openstacklib",
-  :ref => 'origin/master'
+  :git => "#{base_url}/bodepd/puppet-openstacklib",
+  :ref => 'kilo'
 
 mod 'stackforge/ironic',
   :git => "#{base_url}/jiocloud/puppet-ironic",
@@ -91,23 +91,23 @@ mod 'enovance/ceph',
 
 mod 'stackforge/glance',
   :git => "#{base_url}/stackforge/puppet-glance",
-  :ref => 'f377c0229c006b02f43a14be4979553e983cb98e'
+  :ref => 'master'
 
 mod 'puppetlabs/keystone',
   :git => "#{base_url}/stackforge/puppet-keystone",
-  :ref => '89a650631189ffc2f857845d138666a046f0ae5f'
+  :ref => 'master'
 
 mod 'puppetlabs/mysql',
   :git => "#{base_url}/puppetlabs/puppetlabs-mysql",
   :ref => '2.2.x'
 
 mod 'stackforge/neutron',
-  :git => "#{base_url}/jiocloud/puppet-neutron",
-  :ref => 'origin/master'
+  :git => "#{base_url}/bodepd/puppet-neutron",
+  :ref => 'kilo'
 
 mod 'stackforge/nova',
-  :git => "#{base_url}/jiocloud/puppet-nova",
-  :ref => 'origin/master'
+  :git => "#{base_url}/bodepd/puppet-nova",
+  :ref => 'kilo'
 
 mod 'puppetlabs/rabbitmq',
   :git => "#{base_url}/puppetlabs/puppetlabs-rabbitmq",
