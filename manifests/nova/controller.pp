@@ -165,7 +165,7 @@ class rjil::nova::controller (
     # Create flavors
     ##
     Service['httpd'] -> Nova_flavor<||>
-    create_resources('nova_flavor', $flavors, {auth => $nova_auth})
+    create_resources('nova_flavor', $flavors)
 
     class { 'rjil::test::nova_flavor':
       flavors => $flavors,
