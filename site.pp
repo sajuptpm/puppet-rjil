@@ -82,6 +82,15 @@ node /^ct\d+/ {
 
 
 ##
+## Setup contrail cassandra nodes
+##
+node /^ctdb\d+/ {
+  include rjil::base
+  include rjil::cassandra
+}
+
+
+##
 ## oc is openstack controller node which will have all
 ## openstack controller applications
 ##

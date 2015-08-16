@@ -31,6 +31,12 @@ resources:
     image: trusty
     networks: default
     boot_volume: default_volume
+  ctdb:
+    number: 3
+    flavor: large
+    image: trusty
+    networks: default
+    boot_volume: default_volume
   stmonleader:
     number: 1
     flavor: storage
