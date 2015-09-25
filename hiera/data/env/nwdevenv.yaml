@@ -6,7 +6,7 @@ private_address: "%{ipaddress_10_140_15_0_24}"
 private_interface: "%{interface_10_140_15_0_24}"
 
 rjil::jiocloud::consul::encrypt: "%{consul_gossip_encrypt}"
-contrail::vrouter::vrouter_physical_interface: em4
+contrail::vrouter::vrouter_physical_interface: eth3
 
 rjil::ceph::osd::autogenerate: true
 rjil::ceph::osd::autodisk_size: 10
