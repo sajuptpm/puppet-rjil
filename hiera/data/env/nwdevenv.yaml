@@ -8,7 +8,13 @@ private_interface: "%{interface_10_140_15_0_24}"
 rjil::jiocloud::consul::encrypt: "%{consul_gossip_encrypt}"
 contrail::vrouter::vrouter_physical_interface: eth3
 
-rjil::ceph::osd::autogenerate: true
+##Ceph
+#Create 2 RAID-0 Array in each 4TB Disk. Second RAID-0 Array (sdb) can use for osd.
+rjil::ceph::osd::osds:
+ - sdb
+
+#Disable autogenerate to specify osds like rjil::ceph::osd::osds: -sdb
+rjil::ceph::osd::autogenerate: false
 rjil::ceph::osd::autodisk_size: 10
 rjil::ceph::osd::osd_journal_size: 2
 
