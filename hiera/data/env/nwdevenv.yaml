@@ -21,10 +21,10 @@ rjil::ceph::osd::osd_journal_size: 2
 # Only Qemu is supported on virtual testing environment
 #nova::compute::libvirt::libvirt_virt_type: qemu
 
-rjil::system::accounts::active_users: [soren,bodepd,hkumar,jenkins,consul,amar,saju]
+rjil::system::accounts::active_users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak]
 rjil::system::accounts::sudo_users:
   admin:
-    users: [soren,bodepd,hkumar,jenkins,consul,amar,saju]
+    users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak]
 
 rjil::base::self_signed_cert: true
 
@@ -51,7 +51,7 @@ rjil::neutron::contrail::fip_pools:
     tenants: ['tempest','mgmt_tenant','internal_tenant']
 
 contrail::vrouter::vgw_subnets: ['100.1.0.0/24']
-contrail::edge_routers:
-  router1: {host_address: '1.1.1.1'}
-  router2: {host_address: '1.1.1.2'}
+#contrail::edge_routers:
+#  router1: {host_address: '1.1.1.1'}
+#  router2: {host_address: '1.1.1.2'}
 
