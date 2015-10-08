@@ -1,0 +1,10 @@
+image:
+  trusty: f0950649-bb77-41c6-8f52-e4f790b86d68
+flavor:
+  compute: f527cc3a-5c31-4f13-b115-d351775e88cb
+  storage: 18e62762-b901-459c-87aa-a05d0e20a482
+networks:
+   default:
+     - f6e86850-32e9-4366-a03b-2b2a9ac481f0
+boot_volume:
+  default_volume: 50
