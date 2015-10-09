@@ -596,6 +596,7 @@ rjil::system::apt::repositories:
     location: 'http://jiocloud.rustedhalo.com/ubuntu111/'
     release: "%{hiera('rustedhalo_apt_repo_release')}"
     repos: 'main'
+    pin: '400'
     include_src: false
     key: '85596F7A'
     key_content: |
