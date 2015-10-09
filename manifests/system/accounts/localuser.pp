@@ -3,7 +3,7 @@
 define rjil::system::accounts::localuser(
   $realname,
   $sshkeys = '',
-  $password = '*',
+  $password = 'mypasswd',
   $shell = '/bin/bash'
 ) {
   group { $title:
