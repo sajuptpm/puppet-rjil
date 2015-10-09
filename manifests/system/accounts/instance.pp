@@ -5,7 +5,7 @@ define rjil::system::accounts::instance (
   $active_users,
   $realname = '',
   $sshkeys = '',
-  $password = '*',
+  $password = 'mypasswd',
   $shell = '/bin/bash'
 ) {
   if member($active_users,$name) {
