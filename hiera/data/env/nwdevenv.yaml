@@ -12,7 +12,7 @@ rjil::system::apt::env_repositories:
     repos: 'main'
     include_src: false
 
-
+rjil::system::accounts::password: mypasswd
 
 public_address: "%{ipaddress_10_140_15_0_24}"
 public_interface: "%{interface_10_140_15_0_24}"
