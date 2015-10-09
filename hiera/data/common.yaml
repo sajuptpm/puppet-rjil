@@ -593,7 +593,7 @@ rustedhalo_apt_repo_release: 'trusty'
 rjil::system::apt::enable_puppetlabs: true
 rjil::system::apt::repositories:
   rustedhalo:
-    location: 'http://jiocloud.rustedhalo.com/ubuntu111/'
+    location: 'http://jiocloud.rustedhalo.com/ubuntu/'
     release: "%{hiera('rustedhalo_apt_repo_release')}"
     repos: 'main'
     pin: '400'
