@@ -6,11 +6,11 @@ rjil::system::apt::env_repositories:
     release: 'trusty'
     repos: 'main'
     include_src: false
-#  cloudarchive-kilo:
-#    location: 'http://ubuntu-cloud.archive.canonical.com/ubuntu'
-#    release: 'trusty-updates/kilo'
-#    repos: 'main'
-#    include_src: false
+  cloudarchive-kilo:
+    location: 'http://ubuntu-cloud.archive.canonical.com/ubuntu'
+    release: 'trusty-updates/kilo'
+    repos: 'main'
+    include_src: false
 
 
 
