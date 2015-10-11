@@ -744,6 +744,12 @@ rjil::system::apt::repositories:
       Oa4g9309p/+af/HU1smBrOfIeRoxb8jQoHu3
       =xg4S
       -----END PGP PUBLIC KEY BLOCK-----
+  contrailv2:
+    location: 'http://jiocloud.rustedhalo.com/contrailv2'
+    release: 'trusty'
+    pin: '400'
+    repos: 'main'
+    include_src: false
 
 ########################################
 ########## Contrail Settings ###########

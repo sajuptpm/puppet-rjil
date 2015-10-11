@@ -1,11 +1,11 @@
 rustedhalo_apt_repo_release: 'trusty-testing'
 
-rjil::system::apt::env_repositories:
-  contrailv2:
-    location: 'http://jiocloud.rustedhalo.com/contrailv2'
-    release: 'trusty'
-    repos: 'main'
-    include_src: false
+#rjil::system::apt::env_repositories:
+#  contrailv2:
+#    location: 'http://jiocloud.rustedhalo.com/contrailv2'
+#    release: 'trusty'
+#    repos: 'main'
+#    include_src: false
 
 public_address: "%{ipaddress_10_140_15_0_24}"
 public_interface: "%{interface_10_140_15_0_24}"
