@@ -1,0 +1,37 @@
+# for now, don't enable dns for kilo testing
+# b/c it conflicts with dnsmasq config
+contrail::control::enable_dns: false
+
+rjil::jiocloud::dns::entries:
+  identity.jiocloud.com:
+    cname: keystone.service.consul
+  volume.jiocloud.com:
+    cname: cinder.service.consul
+  network.jiocloud.com:
+    cname: neutron.service.consul
+  compute.jiocloud.com:
+    cname: nova.service.consul
+  image.jiocloud.com:
+    cname: glance.service.consul
+  object.jiocloud.com:
+    cname: radosgw.service.consul
+  ironic.jiocloud.com:
+    cname: ironic.service.consul
+
+rjil::neutron::contrail::fip_pools:
+  public:
+    network_name: "%{hiera('public_network_name')}"
+    subnet_name: public_subnet
+    cidr: 100.1.0.0/24
+    subnet_ip_start: 100.1.0.11
+    subnet_ip_end: 100.1.0.254
+    public: true
+#  private_shared:
+#    network_name: private_shared_net
+#    subnet_name: private_shared_subnet
+#    cidr: 99.0.0.0/24
+#    public: false
+#    tenants: ['tempest','testtenant']
+
+
+contrail::nova_metadata_address: :undef
