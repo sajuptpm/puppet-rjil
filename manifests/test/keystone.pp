@@ -11,7 +11,7 @@ class rjil::test::keystone(
 
   include rjil::test::base
 
-  ensure_resource('package', 'python-keystoneclient')
+  #ensure_resource('package', 'python-keystoneclient')
 
   file { "/usr/lib/jiocloud/tests/keystone.sh":
     content => template('rjil/tests/keystone.sh.erb'),
