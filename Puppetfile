@@ -91,11 +91,11 @@ mod 'enovance/ceph',
 
 mod 'stackforge/glance',
   :git => "#{base_url}/stackforge/puppet-glance",
-  :ref => 'master'
+  :ref => 'stable/kilo'
 
 mod 'puppetlabs/keystone',
   :git => "#{base_url}/stackforge/puppet-keystone",
-  :ref => 'master'
+  :ref => 'stable/kilo'
 
 mod 'puppetlabs/mysql',
   :git => "#{base_url}/puppetlabs/puppetlabs-mysql",
