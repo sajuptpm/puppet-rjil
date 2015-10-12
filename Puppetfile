@@ -71,7 +71,7 @@ mod 'puppetlabs/apt',
 
 mod 'stackforge/cinder',
   :git => "#{base_url}/stackforge/puppet-cinder",
-  :ref => 'master'
+  :ref => 'stable/kilo'
 
 mod 'stackforge/openstacklib',
   :git => "#{base_url}/sajuptpm/puppet-openstacklib",
