@@ -74,7 +74,7 @@ mod 'stackforge/cinder',
   :ref => 'master'
 
 mod 'stackforge/openstacklib',
-  :git => "#{base_url}/bodepd/puppet-openstacklib",
+  :git => "#{base_url}/sajuptpm/puppet-openstacklib",
   :ref => 'kilo'
 
 mod 'stackforge/ironic',
