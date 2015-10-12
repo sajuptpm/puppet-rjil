@@ -48,7 +48,6 @@ export puppet_modules_source_branch=contrailv2-vpram
 ./build_scripts/deploy.sh
 #./build_scripts/test.sh
 
-
 ###jiocloud.apply_resources nwdevtest example###
 ###First change "puppet_modules_source_repo" and "puppet_modules_source_branch" if you want.
 ###Then run "./build_scripts/deploy.sh", I added an exit in ./build_scripts/deploy.sh, this will create a userdata.txt file.
@@ -56,18 +55,13 @@ export puppet_modules_source_branch=contrailv2-vpram
 #CMD:
 #python -m jiocloud.apply_resources apply --key_name=mykey1 --project_tag=test_dev_test --mappings=environment/nwdevprovider.map.yaml environment/nwdevlayout.yaml userdata.txt
 
-
-###Setting user password when launching cloud images###
-###Add following 4 lines in userdata.txt file which created by ./build_scripts/deploy.sh, then run "jiocloud.apply_resources apply"
-##cloud-config
-#password: mypasswd
-#chpasswd: { expire: False }
-#ssh_pwauth: True
-
-
 ###Delete VMs###
 #source venv/bin/activate
 #CMD:
 #python -m jiocloud.apply_resources delete test_dev_test
+
+###Boot VM###
+#CMD
+#nova boot --flavor g1.compute --image Ubuntu-trusty --key-name mykey1  --nic net-id=f6e86850-32e9-4366-a03b-2b2a9ac481f0  compute-node0
 
 
