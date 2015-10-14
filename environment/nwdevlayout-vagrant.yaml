@@ -9,11 +9,6 @@ resources:
     flavor: large
     image: trusty
     networks: default
-  oc:
-    number: 1
-    flavor: large
-    image: trusty
-    networks: default
   ocdb:
     number: 1
     flavor: large
@@ -29,18 +24,13 @@ resources:
     flavor: large
     image: trusty
     networks: default
-  stmon:
-    number: 2
-    flavor: large
-    image: trusty
-    networks: default
   st:
     number: 1
     flavor: large
     image: trusty
     networks: default
   cp:
-    number: 1
+    number: 2
     flavor: large
     image: trusty
     networks: default
