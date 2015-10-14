@@ -63,5 +63,7 @@ export puppet_modules_source_branch=contrailv2-vpram
 ###Boot VM###
 #CMD
 #nova boot --flavor g1.compute --image Ubuntu-trusty --key-name mykey1  --nic net-id=f6e86850-32e9-4366-a03b-2b2a9ac481f0  compute-node0
+#nova boot --flavor g1.compute --image Ubuntu-trusty --key-name mykey1  --nic net-id=f6e86850-32e9-4366-a03b-2b2a9ac481f0 --user-data=./userdata.txt compute-node0
+
 
 
