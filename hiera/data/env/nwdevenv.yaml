@@ -1,5 +1,9 @@
 rustedhalo_apt_repo_release: 'trusty-testing'
 
+rjil::nova::compute::rbd_enabled: false
+rjil::glance::backend: file
+
+
 #rjil::system::apt::env_repositories:
 #  contrailv2:
 #    location: 'http://jiocloud.rustedhalo.com/contrailv2'
