@@ -28,10 +28,10 @@ rjil::ceph::osd::osd_journal_size: 2
 # Only Qemu is supported on virtual testing environment
 #nova::compute::libvirt::libvirt_virt_type: qemu
 
-rjil::system::accounts::active_users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak]
+rjil::system::accounts::active_users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak,vpramo]
 rjil::system::accounts::sudo_users:
   admin:
-    users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak]
+    users: [soren,bodepd,hkumar,jenkins,consul,amar,saju,viveksharma,naveenreddy,dpak,vpramo]
 
 rjil::base::self_signed_cert: true
 
