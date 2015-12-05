@@ -19,11 +19,35 @@ contrail::vrouter::vrouter_physical_interface: eth3
 #Create 2 RAID-0 Array in each 4TB Disk. Second RAID-0 Array (sdb) can use for osd.
 rjil::ceph::osd::osds:
  - sdb
+ - sdc
+ - sdd
+ - sde
+ - sdf
+ - sdg
+ - sdh
+ - sdi
+ - sdj
+ - sdk
+ - sdl
+ - sdm
+ - sdn
+ - sdo
+ - sdp
+ - sdq
+ - sdr
+ - sds
+ - sdt
+ - sdu
+ - sdv
+ - sdw
+ - sdx
+ - sdy
+ - sdz
 
 #Disable autogenerate to specify osds like rjil::ceph::osd::osds: -sdb
 rjil::ceph::osd::autogenerate: false
-rjil::ceph::osd::autodisk_size: 10
-rjil::ceph::osd::osd_journal_size: 2
+#rjil::ceph::osd::autodisk_size: 10
+rjil::ceph::osd::osd_journal_size: 10
 
 # Only Qemu is supported on virtual testing environment
 #nova::compute::libvirt::libvirt_virt_type: qemu
